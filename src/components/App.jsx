@@ -9,6 +9,18 @@ import { initialItems } from "../lib/constants";
 function App() {
   const [items, setItems] = useState(initialItems);
   const [packed, setPacked] = useState(false);
+
+  const handleAddItems = (name) => {
+    let newItem = {
+      name,
+      packed: false,
+      id: new Date().getTime(),
+    };
+
+    const newItems = [...items, newItem];
+    setItems(newItems);
+  };
+
   return (
     <>
       <BackgroundHeading />
@@ -20,7 +32,7 @@ function App() {
           pack={packed}
           setPack={setPacked}
         ></ItemList>
-        <Sidebar items={items} setItems={setItems}></Sidebar>
+        <Sidebar handleAddItems={handleAddItems}></Sidebar>
       </main>
       <Footer />
     </>

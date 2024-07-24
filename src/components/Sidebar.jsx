@@ -1,10 +1,10 @@
 import AddItemForm from "./AddItemForm";
 import ButtonGroup from "./ButtonGroup";
 
-export default function Sidebar({ items, setItems }) {
+export default function Sidebar({ handleAddItems }) {
   return (
     <div className="sidebar">
-      <AddItemForm items={items} setItems={setItems} />
+      <AddItemForm handleAddItems={handleAddItems} />
       <ButtonGroup />
     </div>
   );

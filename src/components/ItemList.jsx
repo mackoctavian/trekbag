@@ -16,12 +16,7 @@ function Item({ item }) {
   return (
     <li className="item">
       <label htmlFor="999">
-        <input
-          id="999"
-          type="checkbox"
-          checked={item.packed}
-          onChange={!item.packed}
-        />
+        <input id="999" type="checkbox" checked={item.checked} />
         {item.name}
       </label>
       <button onClick={() => {}}>❌</button>
