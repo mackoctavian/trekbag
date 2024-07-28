@@ -16,7 +16,7 @@ function Item({ item }) {
   return (
     <li className="item">
       <label htmlFor="999">
-        <input id="999" type="checkbox" checked={item.checked} />
+        <input id="999" type="checkbox" checked={item.packed} />
         {item.name}
       </label>
       <button onClick={() => {}}>❌</button>
